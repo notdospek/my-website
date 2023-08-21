@@ -4,8 +4,11 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: white;
+  background-color: var(--dark-purple);
+  background: linear-gradient(to top, #471f66, transparent);
+
+  --dark-purple: #080613;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,7 +29,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -53,6 +56,10 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.flex {
+  display: flex;
 }
 
 @media (prefers-color-scheme: light) {
