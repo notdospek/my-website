@@ -4,7 +4,10 @@ import me from '../images/me.png';
 const Bio = () => {
   return (
     <Container className="flex">
-      <Triangle />
+      <svg height="500" width="500">
+        <polygon points="400,200 60,100 300,450" />
+        Sorry, your browser does not support inline SVG.
+      </svg>
       <GraphicsContainer className="flex">
         {/* <div className="tri-side a" /> */}
         <img src={me} alt="Picture of me" />
@@ -23,13 +26,13 @@ const Bio = () => {
   );
 };
 
-const Triangle = styled.div`
-  width: 0;
-  height: 0;
-  border-right: 40px solid transparent;
-  border-bottom: 100px solid #f09;
-  border-left: 150px solid transparent;
-`;
+// const Triangle = styled.div`
+//   width: 0;
+//   height: 0;
+//   border-right: 40px solid transparent;
+//   border-bottom: 100px solid #f09;
+//   border-left: 150px solid transparent;
+// `;
 
 const Container = styled.div`
   width: 100%;
