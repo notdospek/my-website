@@ -6,7 +6,7 @@
   color-scheme: light dark;
   color: white;
   background-color: var(--dark-purple);
-  background: linear-gradient(to top, #471f66, transparent);
+  background: linear-gradient(to top, #471f66, transparent) no-repeat;
 
   --dark-purple: #080613;
 
