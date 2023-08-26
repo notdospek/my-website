@@ -4,35 +4,26 @@ import me from '../images/me.png';
 const Bio = () => {
   return (
     <Container className="flex">
-      <svg height="500" width="500">
-        <polygon points="400,200 60,100 300,450" />
-        Sorry, your browser does not support inline SVG.
-      </svg>
       <GraphicsContainer className="flex">
-        {/* <div className="tri-side a" /> */}
+        <svg className="line">
+          <polygon className="line" points="40,5 180,450" />
+        </svg>
         <img src={me} alt="Picture of me" />
-        {/* <div className="tri-side b" />
-        <div className="tri-side c" /> */}
+        <svg>
+          <polygon className="triangle" points="40,5 380,140 180,450" />
+        </svg>
       </GraphicsContainer>
       <div className="flex copy">
         <h1>Hello</h1>
-        <h2>A bit about me</h2>
-        <p>
-          Here I will write some things about me and how I am a self taught web
-          developer.
+        <p style={{ fontSize: '1.7rem' }}>
+          I'm Alex Sarson, a self taught web developer based in London, UK. I
+          love learning new things, solving problems and creating beautiful
+          websites!
         </p>
       </div>
     </Container>
   );
 };
-
-// const Triangle = styled.div`
-//   width: 0;
-//   height: 0;
-//   border-right: 40px solid transparent;
-//   border-bottom: 100px solid #f09;
-//   border-left: 150px solid transparent;
-// `;
 
 const Container = styled.div`
   width: 100%;
@@ -45,6 +36,7 @@ const Container = styled.div`
     width: 50%;
     flex-direction: column;
     text-align: left;
+    justify-content: center;
 
     * {
       margin-bottom: 0;
@@ -55,7 +47,7 @@ const Container = styled.div`
     }
 
     p {
-      margin-top: 0.5rem;
+      margin: 2rem 0;
     }
   }
 `;
@@ -64,36 +56,32 @@ const GraphicsContainer = styled.div`
   width: 50%;
   position: relative;
 
+  svg {
+    width: 100%;
+    height: 430px;
+    position: absolute;
+    overflow: visible;
+
+    &.line {
+      z-index: 3;
+    }
+
+    polygon {
+      fill: transparent;
+      stroke-width: 3;
+      stroke: #00eeff;
+      filter: drop-shadow(0 0 0.2rem cyan) drop-shadow(0 0 0.2rem cyan)
+        drop-shadow(0 0 1rem #1100ffcb) drop-shadow(0 0 0.4rem #1100ff)
+        drop-shadow(0 0 2rem #1100ff90);
+    }
+  }
+
   img {
     height: 15rem;
     width: 15rem;
     border-radius: 50%;
     padding: 6rem;
-  }
-
-  .tri-side {
-    position: absolute;
-    border-bottom: 3px solid white;
-    transform-origin: left;
-    top: 2rem;
-
-    &.a {
-      width: 30rem;
-      transform: rotate(60deg);
-    }
-
-    &.b {
-      width: 22rem;
-      transform: rotate(10deg);
-    }
-
-    &.c {
-      transform-origin: right;
-      width: 23.4rem;
-      top: 5.66rem;
-      right: 6.8rem;
-      transform: rotate(286.5deg);
-    }
+    z-index: 2;
   }
 `;
 
