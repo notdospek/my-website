@@ -2,6 +2,7 @@ import { styled } from 'styled-components';
 import './App.css';
 import Bio from './components/Bio';
 import Header from './components/Header';
+import Resume from './components/Resume';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Container>
         <Bio />
+        <Resume />
       </Container>
     </>
   );
