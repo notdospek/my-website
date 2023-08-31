@@ -3,7 +3,7 @@ import me from '../images/me.png';
 
 const Bio = () => {
   return (
-    <Container id='bio' className='flex'>
+    <Container id="bio" className="flex">
       <GraphicsContainer className="flex">
         <svg className="line">
           <polygon className="line" points="40,5 180,450" />
@@ -12,16 +12,14 @@ const Bio = () => {
         <svg>
           <polygon className="triangle" points="40,5 380,140 180,450" />
         </svg>
-        <Line style={{ height: '10px', top: '470px' }} />
-        <Line style={{ height: '10px', top: '490px' }} />
-        <Line style={{ top: '510px' }} />
+        {/* <Line style={{ top: '520px' }} /> */}
       </GraphicsContainer>
       <div className="flex copy">
         <h1>Hello</h1>
         <p style={{ fontSize: '1.7rem' }}>
-          I'm <span>Alex Sarson</span>, a self taught junior web developer based in London, UK. I
-          love learning new things, solving problems and creating beautiful
-          websites!
+          I'm <span>Alex Sarson</span>, a self taught junior web developer based
+          in London, UK. I love learning new things, solving problems and
+          creating beautiful websites!
         </p>
       </div>
     </Container>
@@ -30,10 +28,9 @@ const Bio = () => {
 
 const Container = styled.div`
   width: 100%;
-  border: 1px solid white;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 3rem;
+  margin-top: 15vh;
 
   .copy {
     width: 55%;
@@ -92,15 +89,5 @@ const GraphicsContainer = styled.div`
     z-index: 2;
   }
 `;
-
-const Line = styled.div`
-  position: absolute;
-  width: 4px;
-  height: 1000px;
-  background-color: pink;
-  left: 180px;
-  top: 450px;
-  transform: translateX(-50%);
-`
 
 export default Bio;

@@ -1,5 +1,5 @@
-import React from "react";
-import { styled } from "styled-components";
+import React from 'react';
+import { styled } from 'styled-components';
 
 interface ContainerProps {
   children: React.ReactNode;
@@ -7,10 +7,8 @@ interface ContainerProps {
 }
 
 const Container: React.FC<ContainerProps> = ({ children, id }) => {
-  return (
-    <Cont id={id}>{children}</Cont>
-  )
-}
+  return <Cont id={id}>{children}</Cont>;
+};
 
 const Cont = styled.div`
   width: 100%;
@@ -19,7 +17,6 @@ const Cont = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 25vh;
 
   .copy {
     width: 55%;

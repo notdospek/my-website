@@ -7,9 +7,18 @@ import Resume from './components/Resume';
 function App() {
   return (
     <>
-      <Header />
+      <div
+        style={{
+          paddingBottom: '20px',
+          marginBottom: '260px',
+        }}
+      >
+        <Header />
+        <Container>
+          <Bio />
+        </Container>
+      </div>
       <Container>
-        <Bio />
         <Resume />
       </Container>
     </>
