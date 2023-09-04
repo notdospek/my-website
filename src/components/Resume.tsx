@@ -37,19 +37,15 @@ const LineContainer = styled.div`
     height: 280px; /* 220 gets to resume top, extra 60 added */
     background: linear-gradient(
       to top,
-      #e4fdff,
-      5%,
-      yellow,
-      40%,
+      transparent,
+      10%,
       #00eeff,
       80%,
       transparent
     );
-    /* filter: drop-shadow(0 0 0.2rem cyan) drop-shadow(0 0 0.2rem cyan)
-      drop-shadow(0 0 1rem #1100ffcb) drop-shadow(0 0 0.4rem #1100ff)
-      drop-shadow(0 0 2rem #1100ff90); */
+    filter: var(--blue-line-filter);
 
-    &::after {
+    /* &::after {
       content: '';
       position: absolute;
       inset: -0.625em;
@@ -70,7 +66,7 @@ const LineContainer = styled.div`
       width: 6px;
       border-radius: 5px;
       z-index: -1;
-    }
+    } */
   }
 
   .paper-clip {

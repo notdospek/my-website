@@ -74,10 +74,8 @@ const GraphicsContainer = styled.div`
     polygon {
       fill: transparent;
       stroke-width: 3;
-      stroke: #00eeff;
-      filter: drop-shadow(0 0 0.2rem cyan) drop-shadow(0 0 0.2rem cyan)
-        drop-shadow(0 0 1rem #1100ffcb) drop-shadow(0 0 0.4rem #1100ff)
-        drop-shadow(0 0 2rem #1100ff90);
+      stroke: var(--blue-line-stroke);
+      filter: var(--blue-line-filter);
     }
   }
 

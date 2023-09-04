@@ -10,6 +10,10 @@
 
   --dark-purple: #080613;
   --dull-text: #9a9a9a;
+  --blue-line-stroke: #00eeff;
+  --blue-line-filter: drop-shadow(0 0 0.2rem cyan) drop-shadow(0 0 0.2rem cyan)
+    drop-shadow(0 0 1rem #1100ffcb) drop-shadow(0 0 0.4rem #1100ff)
+    drop-shadow(0 0 2rem #1100ff90);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
