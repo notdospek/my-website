@@ -30,7 +30,7 @@ const Container = styled.div`
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 15vh;
+  margin-top: 10vh;
 
   .copy {
     width: 55%;

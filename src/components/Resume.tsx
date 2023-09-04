@@ -11,6 +11,7 @@ const Resume = () => {
         <LineContainer>
           <div className="line" />
           <FiPaperclip className="paper-clip" />
+          <div className="line" style={{ height: '600px' }} />
         </LineContainer>
       </div>
       <div className="copy" style={{ border: '1px solid green' }}>
@@ -24,7 +25,7 @@ const Resume = () => {
 const LineContainer = styled.div`
   position: absolute;
   left: 180px;
-  top: -220px;
+  top: -230px;
   transform: translateX(-50%);
 
   * {
@@ -34,7 +35,7 @@ const LineContainer = styled.div`
   .line {
     width: 4px;
     position: relative;
-    height: 280px; /* 220 gets to resume top, extra 60 added */
+    height: 230px; /* 230 gets to resume top */
     background: linear-gradient(
       to top,
       transparent,
@@ -44,29 +45,6 @@ const LineContainer = styled.div`
       transparent
     );
     filter: var(--blue-line-filter);
-
-    /* &::after {
-      content: '';
-      position: absolute;
-      inset: -0.625em;
-      left: 6px;
-      transform: translateX(-50%);
-      background: linear-gradient(
-        to top,
-        white,
-        5%,
-        yellow,
-        40%,
-        cyan,
-        80%,
-        transparent
-      );
-      filter: blur(0.3rem);
-      opacity: 0.8;
-      width: 6px;
-      border-radius: 5px;
-      z-index: -1;
-    } */
   }
 
   .paper-clip {
@@ -75,8 +53,7 @@ const LineContainer = styled.div`
     margin-bottom: 1rem;
     border-radius: 50%;
     padding: 3px;
-    filter: drop-shadow(0 0 0.2rem cyan) drop-shadow(0 0 0.5rem cyan)
-      drop-shadow(0 0 1rem cyan) drop-shadow(0 0 1.5rem #1100ffb7);
+    filter: var(--blue-radial-filter);
     color: white;
   }
 `;
