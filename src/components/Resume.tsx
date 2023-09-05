@@ -16,10 +16,18 @@ const Resume = () => {
       </div>
       <div className="copy" style={{ border: '1px solid green' }}>
         <h1>Resume</h1>
-        <ResumeSection>Resume Section</ResumeSection>
+        <ResumeSection {...workExp}>Resume Section</ResumeSection>
       </div>
     </Container>
   );
+};
+
+const workExp = {
+  title: 'This is the title',
+  dates: {
+    date1: 'Jan 01',
+    date2: '03',
+  },
 };
 
 const LineContainer = styled.div`
