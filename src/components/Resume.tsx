@@ -14,19 +14,43 @@ const Resume = () => {
           <div className="line" style={{ height: '600px' }} />
         </LineContainer>
       </div>
-      <div className="copy" style={{ border: '1px solid green' }}>
+      <div className="copy">
         <h1>Resume</h1>
-        <ResumeSection {...workExp}>Resume Section</ResumeSection>
+        <ResumeSection {...workExp}>
+          <p>
+            In my current role, I implement new features across front-end and
+            CMS systems on a twice weekly release schedule. I also independently
+            fix bugs and issues across 6 journals and 6 iw websites.
+          </p>
+          <p></p>
+        </ResumeSection>
+
+        <ResumeSection {...nextExp}>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+            adipisci, et eius necessitatibus odio dolore. Tenetur voluptates
+            voluptatem iusto quas quam eum incidunt facere tempore molestias
+            molestiae? Porro, at? Officiis?
+          </p>
+        </ResumeSection>
       </div>
     </Container>
   );
 };
 
 const workExp = {
-  title: 'This is the title',
+  title: 'Magdalen Medical Publishing - Junior Web Developer',
   dates: {
-    date1: 'Jan 01',
-    date2: '03',
+    start: 'June 2022',
+    end: 'Present',
+  },
+};
+
+const nextExp = {
+  title: 'This is the next section',
+  dates: {
+    start: 'June 2019',
+    end: 'June 2022',
   },
 };
 

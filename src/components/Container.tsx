@@ -13,10 +13,13 @@ const Container: React.FC<ContainerProps> = ({ children, id }) => {
 const Cont = styled.div`
   width: 100%;
   min-height: 100vh;
-  border: 1px solid white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  &.scaffold {
+    border: 1px solid white;
+  }
 
   .copy {
     width: 55%;
