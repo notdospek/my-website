@@ -1,4 +1,3 @@
-import React from 'react';
 import Container from './Container';
 import ResumeSection from './ResumeSection';
 import { styled } from 'styled-components';
