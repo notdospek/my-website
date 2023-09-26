@@ -18,7 +18,9 @@ const ResumeSection: React.FC<ResumeSecProps> = ({
   return (
     <Section>
       <div className="left">
-        <span>{dates.start} - </span>
+        <span>
+          {dates.start} {dates.start == '' ? '' : '- '}
+        </span>
         <span>{dates.end}</span>
       </div>
       <div className="right">
