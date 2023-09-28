@@ -34,8 +34,12 @@ const ResumeSection: React.FC<ResumeSecProps> = ({
 const Section = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 2rem;
+  margin-top: 4rem;
   position: relative;
+
+  &:first-of-type {
+    margin-top: 2rem;
+  }
 
   .left {
     position: absolute;
@@ -58,6 +62,10 @@ const Section = styled.div`
 
     p {
       margin-top: 0.5rem;
+    }
+
+    .inner {
+      margin-top: 1rem;
     }
   }
 `;
