@@ -8,9 +8,9 @@ const Resume = () => {
     <Container id="resume">
       <div style={{ position: 'relative' }}>
         <LineContainer>
-          <div className="line first" />
+          <div className="line intro" />
           <FiPaperclip className="paper-clip" />
-          <div className="line 2" style={{ height: '600px' }} />
+          <div className="line resume" style={{ height: '870px' }} />
         </LineContainer>
       </div>
       <div className="copy">
@@ -23,7 +23,7 @@ const Resume = () => {
             providing a GUI for analytical data in Metabase hosted on AWS
             Elastic Beanstalk, and changing our workflow to encorporate
             Dockerised local environments and deployments now that our sites are
-            hosted on AWS ECS.
+            hosted on AWS ECS Containers.
           </p>
         </ResumeSection>
 
@@ -100,6 +100,7 @@ const LineContainer = styled.div`
     width: 4px;
     position: relative;
     height: 230px; /* 230 gets to resume top */
+    filter: var(--blue-line-filter);
     background: linear-gradient(
       to top,
       transparent,
@@ -108,9 +109,8 @@ const LineContainer = styled.div`
       80%,
       transparent
     );
-    filter: var(--blue-line-filter);
 
-    &.first {
+    &.intro {
       background: linear-gradient(
         to top,
         transparent,
