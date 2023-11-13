@@ -2,17 +2,31 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  padding: 0;
+  margin: 0;
 
-  color-scheme: light dark;
   color: white;
-  background-color: var(--dark-purple);
-  background: linear-gradient(to top, #471f66, transparent) no-repeat;
+  background-color: var(--button-colour);
 
   --dark-purple: #080613;
   --dull-text: #9a9a9a;
   --blue-line-stroke: #00eeff;
-  --blue-line-filter: drop-shadow(0 0 0.2rem cyan) drop-shadow(0 0 0.2rem cyan) drop-shadow(0 0 1rem #1100ffcb) drop-shadow(0 0 0.4rem #1100ff) drop-shadow(0 0 2rem #1100ff90);
-  --blue-radial-filter: drop-shadow(0 0 0.2rem #00eeff) drop-shadow(0 0 0.5rem #00eeff) drop-shadow(0 0 1rem #1100ffcb) drop-shadow(0 0 1.5rem #1100ff) drop-shadow(0 0 2rem #1100ff90);
+  --blue-line-filter: drop-shadow(0 0 0.2rem cyan) drop-shadow(0 0 0.2rem cyan)
+    drop-shadow(0 0 1rem #1100ffcb) drop-shadow(0 0 0.4rem #1100ff)
+    drop-shadow(0 0 2rem #1100ff90);
+  --blue-radial-filter: drop-shadow(0 0 0.2rem #00eeff)
+    drop-shadow(0 0 0.5rem #00eeff) drop-shadow(0 0 1rem #1100ffcb)
+    drop-shadow(0 0 1.5rem #1100ff) drop-shadow(0 0 2rem #1100ff90);
+
+  --button-colour: #a03160;
+  --case-indent-colour: #cdc6c0;
+  --case-primary-colour: #e7dfd9;
+  --case-secondary-colour: #8f8d99;
+  --case-text-colour: #292e98;
+  --d-pad-colour: #35353a;
+  --screen-colour: #c5cda2;
+  --screen-text-colour: #3f3f3f;
+  --start-button-colour: #898382;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -35,8 +49,8 @@ body {
   margin: 0;
   display: flex;
   /* place-items: center; */
-  min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -67,19 +81,4 @@ button:focus-visible {
 
 .flex {
   display: flex;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
 }
