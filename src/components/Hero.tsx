@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import Me from "../images/me.png"
 
 const Hero = () => {
   return (

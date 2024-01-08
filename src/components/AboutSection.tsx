@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Section from "./Section"
 import Me from "../images/me.png"
+import Tile from "./Tile"
 
 const AboutSection = () => {
   const tiles = [
@@ -27,15 +28,12 @@ const AboutSection = () => {
       </HeaderContainer>
       <div className="tiles-container">
         {tiles.map((tile, i) => (
-          <Tile key={`tile${i}`}>
-            <div className="tile-top">
-              <img src={tile.image.Me} alt={`${tile.title} Image`} />
-            </div>
-            <div className="tile-bottom">
-              <h3>{tile.title}</h3>
-              <p>{tile.excerpt}</p>
-            </div>
-          </Tile>
+          <Tile
+            excerpt={tile.excerpt}
+            image={tile.image.Me}
+            key={`tile${i}`}
+            title={tile.title}
+          />
         ))}
       </div>
     </Section>
@@ -50,23 +48,23 @@ const HeaderContainer = styled.div`
   }
 `
 
-const Tile = styled.div`
-  background-color: var(--surface-container);
-  border-radius: var(--tile-border-radius);
+// const Tile = styled.div`
+//   background-color: var(--surface-container);
+//   border-radius: var(--tile-border-radius);
 
-  .tile-top{
-    width: 100%;
-    height: 200px;
-    background-color: pink;
-    border-radius: var(--tile-border-radius);
-    overflow: hidden;
+//   .tile-top{
+//     width: 100%;
+//     height: 200px;
+//     background-color: pink;
+//     border-radius: var(--tile-border-radius);
+//     overflow: hidden;
 
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-`
+//     img {
+//       height: 100%;
+//       width: 100%;
+//       object-fit: cover;
+//     }
+//   }
+// `
 
 export default AboutSection
