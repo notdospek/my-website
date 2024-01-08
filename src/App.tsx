@@ -1,33 +1,21 @@
 import { styled } from 'styled-components';
 import './App.css';
-import Bio from './components/Bio';
-import Header from './components/Header';
-import Resume from './components/Resume';
+import Layout from './components/Layout';
+import Hero from './components/Hero';
+import AboutSection from './components/AboutSection';
 
 function App() {
   return (
-    <>
-      <div
-        style={{
-          paddingBottom: '20px',
-          marginBottom: '260px',
-        }}
-      >
-        <Header />
-        <Container>
-          <Bio />
-        </Container>
-      </div>
-      <Container>
-        <Resume />
-      </Container>
-    </>
+    <Layout>
+      <Hero />
+      <AboutSection />
+    </Layout>
   );
 }
 
-const Container = styled.div`
-  max-width: 1000px;
-  margin: 0 auto;
-`;
+// const Container = styled.div`
+//   max-width: 1000px;
+//   margin: 0 auto;
+// `;
 
 export default App;

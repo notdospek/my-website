@@ -1,4 +1,4 @@
-import Container from './Container';
+import Container from './Layout';
 import ResumeSection from './ResumeSection';
 import { styled } from 'styled-components';
 import { FiPaperclip } from 'react-icons/fi';
@@ -48,7 +48,7 @@ const Resume = () => {
           </p>
         </ResumeSection>
 
-        <ResumeSection {...further}>{/* blank */}</ResumeSection>
+        <ResumeSection {...further}>blank</ResumeSection>
       </div>
     </Container>
   );
